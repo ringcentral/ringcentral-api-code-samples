@@ -9,5 +9,8 @@ const accountId = '<ENTER VALUE>';
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});
 const platform = rcsdk.platform();
-await platform.login({ username: process.env.username, extension: process.env.extension, password: process.env.password });
-const r = await platform.post(`/restapi/v1.0/account/${accountId}/extension/${extensionId}/meeting/${meetingId}/end`);
+platform.login({ username: process.env.username, extension: process.env.extension, password: process.env.password }).then(() => {
+    platform.post(`/restapi/v1.0/account/${accountId}/extension/${extensionId}/meeting/${meetingId}/end`).then((r) => {
+        // PROCESS RESPONSE
+    });
+});

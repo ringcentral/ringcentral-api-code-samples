@@ -18,4 +18,5 @@ $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), get
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->get("/restapi/v1.0/account/{$accountId}/presence", $queryParams);
+// PROCESS RESPONSE
 ?>

@@ -7,3 +7,4 @@ rcsdk = SDK(os.environ['clientId'], os.environ['clientSecret'], os.environ['serv
 platform = rcsdk.platform()
 platform.login(os.environ['username'], os.environ['extension'], os.environ['password'])
 r = platform.get('/restapi')
+# PROCESS RESPONSE

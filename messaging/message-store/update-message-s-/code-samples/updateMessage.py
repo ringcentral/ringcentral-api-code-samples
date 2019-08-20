@@ -17,3 +17,4 @@ rcsdk = SDK(os.environ['clientId'], os.environ['clientSecret'], os.environ['serv
 platform = rcsdk.platform()
 platform.login(os.environ['username'], os.environ['extension'], os.environ['password'])
 r = platform.put(f'/restapi/v1.0/account/{accountId}/extension/{extensionId}/message-store/{messageId}', body)
+# PROCESS RESPONSE

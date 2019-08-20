@@ -9,7 +9,7 @@ accountId = '<ENTER VALUE>'
 # POST BODY
 body = {
     'topic': '<ENTER VALUE>',
-    'meetingType': '<ENTER VALUE>',
+    'meetingType': 'Scheduled',
     'schedule': {
         'startTime': '<ENTER VALUE>',
         'durationInMinutes': 000,
@@ -39,3 +39,4 @@ rcsdk = SDK(os.environ['clientId'], os.environ['clientSecret'], os.environ['serv
 platform = rcsdk.platform()
 platform.login(os.environ['username'], os.environ['extension'], os.environ['password'])
 r = platform.put(f'/restapi/v1.0/account/{accountId}/extension/{extensionId}/meeting/{meetingId}', body)
+# PROCESS RESPONSE

@@ -4,8 +4,49 @@
 // PATH PARAMETERS
 const accountId = '<ENTER VALUE>';
 
+// POST BODY
+const body = {
+    name: '<ENTER VALUE>',
+    site: {
+        id: '<ENTER VALUE>',
+        name: '<ENTER VALUE>'
+    },
+    publicIpRanges: [
+        {
+            id: '<ENTER VALUE>',
+            startIp: '<ENTER VALUE>',
+            endIp: '<ENTER VALUE>'
+        },
+    ],
+    privateIpRanges: [
+        {
+            id: '<ENTER VALUE>',
+            startIp: '<ENTER VALUE>',
+            endIp: '<ENTER VALUE>',
+            name: '<ENTER VALUE>',
+            emergencyAddress: {
+                country: '<ENTER VALUE>',
+                countryId: '<ENTER VALUE>',
+                countryIsoCode: '<ENTER VALUE>',
+                countryName: '<ENTER VALUE>',
+                state: '<ENTER VALUE>',
+                stateId: '<ENTER VALUE>',
+                stateIsoCode: '<ENTER VALUE>',
+                stateName: '<ENTER VALUE>',
+                city: '<ENTER VALUE>',
+                street: '<ENTER VALUE>',
+                street2: '<ENTER VALUE>',
+                zip: '<ENTER VALUE>'
+            }
+        },
+    ]
+};
+
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});
 const platform = rcsdk.platform();
-await platform.login({ username: process.env.username, extension: process.env.extension, password: process.env.password });
-const r = await platform.post(`/restapi/v1.0/account/${accountId}/emergency-address-auto-update/networks`);
+platform.login({ username: process.env.username, extension: process.env.extension, password: process.env.password }).then(() => {
+    platform.post(`/restapi/v1.0/account/${accountId}/emergency-address-auto-update/networks`, body).then((r) => {
+        // PROCESS RESPONSE
+    });
+});

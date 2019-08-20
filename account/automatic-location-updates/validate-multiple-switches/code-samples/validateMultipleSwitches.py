@@ -39,3 +39,4 @@ rcsdk = SDK(os.environ['clientId'], os.environ['clientSecret'], os.environ['serv
 platform = rcsdk.platform()
 platform.login(os.environ['username'], os.environ['extension'], os.environ['password'])
 r = platform.post(f'/restapi/v1.0/account/{accountId}/emergency-address-auto-update/switches-bulk-validate', body)
+# PROCESS RESPONSE

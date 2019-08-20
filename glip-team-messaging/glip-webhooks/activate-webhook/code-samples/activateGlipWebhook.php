@@ -10,4 +10,5 @@ $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), get
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->post("/restapi/v1.0/glip/webhooks/{$webhookId}/activate");
+// PROCESS RESPONSE
 ?>

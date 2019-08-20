@@ -12,4 +12,5 @@ $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), get
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->delete("/restapi/v1.0/account/{$accountId}/extension/{$extensionId}/answering-rule/{$ruleId}");
+// PROCESS RESPONSE
 ?>

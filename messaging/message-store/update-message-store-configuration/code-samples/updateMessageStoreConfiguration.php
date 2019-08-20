@@ -8,11 +8,12 @@ $accountId = '<ENTER VALUE>';
 // POST BODY
 $body = array(
     'retentionPeriod' => 000
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->put("/restapi/v1.0/account/{$accountId}/message-store-configuration", $body);
+// PROCESS RESPONSE
 ?>

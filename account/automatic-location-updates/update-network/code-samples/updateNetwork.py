@@ -8,7 +8,10 @@ networkId = '<ENTER VALUE>'
 # POST BODY
 body = {
     'name': '<ENTER VALUE>',
-    'site': '<ENTER VALUE>',
+    'site': {
+        'id': '<ENTER VALUE>',
+        'name': '<ENTER VALUE>'
+    },
     'publicIpRanges': [
         {
             'id': '<ENTER VALUE>',
@@ -20,7 +23,22 @@ body = {
         {
             'id': '<ENTER VALUE>',
             'startIp': '<ENTER VALUE>',
-            'endIp': '<ENTER VALUE>'
+            'endIp': '<ENTER VALUE>',
+            'name': '<ENTER VALUE>',
+            'emergencyAddress': {
+                'country': '<ENTER VALUE>',
+                'countryId': '<ENTER VALUE>',
+                'countryIsoCode': '<ENTER VALUE>',
+                'countryName': '<ENTER VALUE>',
+                'state': '<ENTER VALUE>',
+                'stateId': '<ENTER VALUE>',
+                'stateIsoCode': '<ENTER VALUE>',
+                'stateName': '<ENTER VALUE>',
+                'city': '<ENTER VALUE>',
+                'street': '<ENTER VALUE>',
+                'street2': '<ENTER VALUE>',
+                'zip': '<ENTER VALUE>'
+            }
         }
     ]
 }
@@ -31,3 +49,4 @@ rcsdk = SDK(os.environ['clientId'], os.environ['clientSecret'], os.environ['serv
 platform = rcsdk.platform()
 platform.login(os.environ['username'], os.environ['extension'], os.environ['password'])
 r = platform.put(f'/restapi/v1.0/account/{accountId}/emergency-address-auto-update/networks/{networkId}', body)
+# PROCESS RESPONSE

@@ -14,4 +14,5 @@ $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), get
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->get("/scim/v2/Users", $queryParams);
+// PROCESS RESPONSE
 ?>

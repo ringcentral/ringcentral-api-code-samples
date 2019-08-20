@@ -8,13 +8,19 @@ const accountId = '<ENTER VALUE>';
 // POST BODY
 const body = {
     emergencyServiceAddress: {
-        customerName: '<ENTER VALUE>',
         street: '<ENTER VALUE>',
         street2: '<ENTER VALUE>',
         city: '<ENTER VALUE>',
         zip: '<ENTER VALUE>',
+        customerName: '<ENTER VALUE>',
         state: '<ENTER VALUE>',
-        country: '<ENTER VALUE>'
+        stateId: '<ENTER VALUE>',
+        stateIsoCode: '<ENTER VALUE>',
+        stateName: '<ENTER VALUE>',
+        countryId: '<ENTER VALUE>',
+        countryIsoCode: '<ENTER VALUE>',
+        country: '<ENTER VALUE>',
+        countryName: '<ENTER VALUE>'
     },
     extension: {
         id: '<ENTER VALUE>'
@@ -32,5 +38,8 @@ const body = {
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});
 const platform = rcsdk.platform();
-await platform.login({ username: process.env.username, extension: process.env.extension, password: process.env.password });
-const r = await platform.put(`/restapi/v1.0/account/${accountId}/device/${deviceId}`, body);
+platform.login({ username: process.env.username, extension: process.env.extension, password: process.env.password }).then(() => {
+    platform.put(`/restapi/v1.0/account/${accountId}/device/${deviceId}`, body).then((r) => {
+        // PROCESS RESPONSE
+    });
+});

@@ -49,11 +49,12 @@ $body = array(
         'department' => '<ENTER VALUE>'
     ),
     'userName' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->put("/scim/v2/Users/{$id}", $body);
+// PROCESS RESPONSE
 ?>

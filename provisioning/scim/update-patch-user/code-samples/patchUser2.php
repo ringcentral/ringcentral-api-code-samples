@@ -17,11 +17,12 @@ $body = array(
     'schemas' => array(
         'urn:ietf:params:scim:api:messages:2.0:PatchOp'  
     )
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));
 $platform = $rcsdk->platform();
 $platform->login(getenv('username'), getenv('extension'), getenv('password'));
 $r = $platform->patch("/scim/v2/Users/{$id}", $body);
+// PROCESS RESPONSE
 ?>

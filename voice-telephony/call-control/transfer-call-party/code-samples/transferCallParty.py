@@ -9,6 +9,7 @@ partyId = '<ENTER VALUE>'
 # POST BODY
 body = {
     'phoneNumber': '<ENTER VALUE>',
+    'extensionNumber': '<ENTER VALUE>',
     'voicemail': '<ENTER VALUE>',
     'parkOrbit': '<ENTER VALUE>'
 }
@@ -19,3 +20,4 @@ rcsdk = SDK(os.environ['clientId'], os.environ['clientSecret'], os.environ['serv
 platform = rcsdk.platform()
 platform.login(os.environ['username'], os.environ['extension'], os.environ['password'])
 r = platform.post(f'/restapi/v1.0/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer', body)
+# PROCESS RESPONSE
