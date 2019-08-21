@@ -12,7 +12,7 @@ const queryParams = {
     //type: [ 'Voice', 'Fax' ],
     //page: 1,
     //perPage: 100
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

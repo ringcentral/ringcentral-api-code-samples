@@ -7,7 +7,7 @@ const subscriptionId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 const queryParams = {
     //aggregated: true
-}
+};
 
 // POST BODY
 const body = {

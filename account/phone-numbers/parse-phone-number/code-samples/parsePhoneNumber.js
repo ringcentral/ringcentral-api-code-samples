@@ -5,7 +5,7 @@
 const queryParams = {
     //homeCountry: '<ENTER VALUE>',
     //nationalAsPriority: true
-}
+};
 
 // POST BODY
 const body = {

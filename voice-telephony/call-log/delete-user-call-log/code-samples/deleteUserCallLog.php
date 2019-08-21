@@ -14,7 +14,7 @@ $queryParams = array(
     //'type' => array( 'Voice', 'Fax' ),
     //'direction' => array( 'Inbound', 'Outbound' ),
     //'dateFrom' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

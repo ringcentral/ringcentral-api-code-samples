@@ -9,7 +9,7 @@ $queryParams = array(
     //'page' => 1,
     //'perPage' => 100,
     //'withPhoneNumbers' => true
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

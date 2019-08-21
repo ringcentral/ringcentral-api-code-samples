@@ -12,7 +12,7 @@ const queryParams = {
     //perPage: 100,
     //status: [ 'Enabled', 'Disabled', 'NotActivated', 'Unassigned' ],
     //type: [ 'User', 'FaxUser', 'VirtualUser', 'DigitalUser', 'Department', 'Announcement', 'Voicemail', 'SharedLinesGroup', 'PagingOnly', 'IvrMenu', 'ApplicationExtension', 'ParkLocation', 'Limited', 'Bot' ]
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

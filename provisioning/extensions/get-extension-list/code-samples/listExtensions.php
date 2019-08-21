@@ -13,7 +13,7 @@ $queryParams = array(
     //'perPage' => 100,
     //'status' => array( 'Enabled', 'Disabled', 'NotActivated', 'Unassigned' ),
     //'type' => array( 'User', 'FaxUser', 'VirtualUser', 'DigitalUser', 'Department', 'Announcement', 'Voicemail', 'SharedLinesGroup', 'PagingOnly', 'IvrMenu', 'ApplicationExtension', 'ParkLocation', 'Limited', 'Bot' )
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

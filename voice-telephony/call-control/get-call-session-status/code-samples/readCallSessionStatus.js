@@ -9,7 +9,7 @@ const telephonySessionId = '<ENTER VALUE>';
 const queryParams = {
     //timestamp: '<ENTER VALUE>',
     //timeout: '<ENTER VALUE>'
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

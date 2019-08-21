@@ -11,7 +11,7 @@ $recordingId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 $queryParams = array(
     //'brandId' => '~'
-)
+);
 
 // POST BODY
 $body = array(

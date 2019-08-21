@@ -10,7 +10,7 @@ $accountId = '<ENTER VALUE>';
 $queryParams = array(
     //'permissionId' => '<ENTER VALUE>',
     //'targetExtensionId' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

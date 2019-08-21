@@ -10,7 +10,7 @@ $queryParams = array(
     //'type' => 'UserSettings',
     //'page' => '<ENTER VALUE>',
     //'perPage' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

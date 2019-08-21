@@ -9,7 +9,7 @@ const queryParams = {
     //type: 'UserSettings',
     //page: '<ENTER VALUE>',
     //perPage: '<ENTER VALUE>'
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

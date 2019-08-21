@@ -16,7 +16,7 @@ const queryParams = {
     //recordCount: 000,
     //syncToken: '<ENTER VALUE>',
     //syncType: [ 'FSync', 'ISync' ]
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

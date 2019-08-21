@@ -9,7 +9,7 @@ const extensionId = '<ENTER VALUE>';
 const queryParams = {
     //linePooling: 'Host',
     //feature: 'Intercom'
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

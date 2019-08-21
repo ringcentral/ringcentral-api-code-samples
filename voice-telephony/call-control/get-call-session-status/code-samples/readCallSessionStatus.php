@@ -10,7 +10,7 @@ $telephonySessionId = '<ENTER VALUE>';
 $queryParams = array(
     //'timestamp' => '<ENTER VALUE>',
     //'timeout' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

@@ -6,7 +6,7 @@ const queryParams = {
     //type: [ 'Everyone', 'Group', 'Personal', 'Direct', 'Team' ],
     //recordCount: 30,
     //pageToken: '<ENTER VALUE>'
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

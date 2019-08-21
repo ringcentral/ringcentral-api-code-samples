@@ -7,7 +7,7 @@ $queryParams = array(
     //'filter' => '<ENTER VALUE>',
     //'startIndex' => 1,
     //'count' => 100
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

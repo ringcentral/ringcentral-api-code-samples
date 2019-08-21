@@ -6,7 +6,7 @@
 $queryParams = array(
     //'homeCountry' => '<ENTER VALUE>',
     //'nationalAsPriority' => true
-)
+);
 
 // POST BODY
 $body = array(

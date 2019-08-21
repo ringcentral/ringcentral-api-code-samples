@@ -10,7 +10,7 @@ const queryParams = {
     //conversationId: [ string ],
     //dateTo: '<ENTER VALUE>',
     //type: 'All'
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

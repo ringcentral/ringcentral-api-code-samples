@@ -10,7 +10,7 @@ const queryParams = {
     //sipData: true,
     //page: 000,
     //perPage: 000
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

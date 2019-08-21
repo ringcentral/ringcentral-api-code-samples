@@ -8,7 +8,7 @@ $queryParams = array(
     //'perPage' => 100,
     //'type' => 'Introductory',
     //'usageType' => 'UserExtensionAnsweringRule'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

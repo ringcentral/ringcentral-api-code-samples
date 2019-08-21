@@ -8,7 +8,7 @@ $subscriptionId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 $queryParams = array(
     //'aggregated' => true
-)
+);
 
 // POST BODY
 $body = array(

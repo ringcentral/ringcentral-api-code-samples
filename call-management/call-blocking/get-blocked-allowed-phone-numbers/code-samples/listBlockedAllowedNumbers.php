@@ -11,7 +11,7 @@ $queryParams = array(
     //'page' => 000,
     //'perPage' => 000,
     //'status' => 'Blocked'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

@@ -10,7 +10,7 @@ $extensionId = '<ENTER VALUE>';
 $queryParams = array(
     //'detailedTelephonyState' => true,
     //'sipData' => true
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

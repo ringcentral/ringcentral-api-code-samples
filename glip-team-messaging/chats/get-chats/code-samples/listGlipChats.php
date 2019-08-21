@@ -7,7 +7,7 @@ $queryParams = array(
     //'type' => array( 'Everyone', 'Group', 'Personal', 'Direct', 'Team' ),
     //'recordCount' => 30,
     //'pageToken' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

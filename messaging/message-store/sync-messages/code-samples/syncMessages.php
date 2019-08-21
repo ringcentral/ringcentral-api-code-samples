@@ -17,7 +17,7 @@ $queryParams = array(
     //'recordCount' => 000,
     //'syncToken' => '<ENTER VALUE>',
     //'syncType' => array( 'FSync', 'ISync' )
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

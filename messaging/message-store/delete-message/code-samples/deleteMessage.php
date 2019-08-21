@@ -11,7 +11,7 @@ $messageId = '<ENTER VALUE>';
 $queryParams = array(
     //'purge' => true,
     //'conversationId' => 000
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

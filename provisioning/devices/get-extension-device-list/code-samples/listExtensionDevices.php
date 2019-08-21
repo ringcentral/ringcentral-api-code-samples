@@ -10,7 +10,7 @@ $extensionId = '<ENTER VALUE>';
 $queryParams = array(
     //'linePooling' => 'Host',
     //'feature' => 'Intercom'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

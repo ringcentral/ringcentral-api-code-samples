@@ -11,7 +11,7 @@ $queryParams = array(
     //'conversationId' => array( string ),
     //'dateTo' => '<ENTER VALUE>',
     //'type' => 'All'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

@@ -10,7 +10,7 @@ $contactId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 $queryParams = array(
     //'dialingPlan' => '<ENTER VALUE>'
-)
+);
 
 // POST BODY
 $body = array(

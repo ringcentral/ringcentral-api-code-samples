@@ -8,7 +8,7 @@ const extensionId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 const queryParams = {
     //dialingPlan: '<ENTER VALUE>'
-}
+};
 
 // POST BODY
 const body = {

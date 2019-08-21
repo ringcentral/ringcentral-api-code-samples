@@ -9,7 +9,7 @@ $queryParams = array(
     //'perPage' => 100,
     //'stateId' => '<ENTER VALUE>',
     //'withNxx' => true
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

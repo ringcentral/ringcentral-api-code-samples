@@ -10,7 +10,7 @@ const messageId = '<ENTER VALUE>';
 const queryParams = {
     //purge: true,
     //conversationId: 000
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

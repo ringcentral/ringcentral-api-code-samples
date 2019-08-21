@@ -19,7 +19,7 @@ $queryParams = array(
     //'page' => 1,
     //'perPage' => 100,
     //'sessionId' => '<ENTER VALUE>'
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

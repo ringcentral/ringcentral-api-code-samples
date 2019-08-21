@@ -14,7 +14,7 @@ const queryParams = {
     //statusGroup: [ 'Missed', 'All' ],
     //view: 'Simple',
     //showDeleted: true
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

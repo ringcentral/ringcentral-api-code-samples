@@ -8,7 +8,7 @@ const deviceId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 const queryParams = {
     //syncEmergencyAddress: true
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

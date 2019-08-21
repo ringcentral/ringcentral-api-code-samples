@@ -10,7 +10,7 @@ const recordingId = '<ENTER VALUE>';
 // OPTIONAL QUERY PARAMETERS
 const queryParams = {
     //brandId: '~'
-}
+};
 
 // POST BODY
 const body = {

@@ -11,7 +11,7 @@ const queryParams = {
     //orderBy: '<ENTER VALUE>',
     //perPage: 000,
     //page: 1
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});

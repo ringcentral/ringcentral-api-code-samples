@@ -15,7 +15,7 @@ $queryParams = array(
     //'statusGroup' => array( 'Missed', 'All' ),
     //'view' => 'Simple',
     //'showDeleted' => true
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

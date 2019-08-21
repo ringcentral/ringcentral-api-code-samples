@@ -15,7 +15,7 @@ $queryParams = array(
     //'orderBy' => 'name',
     //'perPage' => 000,
     //'page' => 1
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

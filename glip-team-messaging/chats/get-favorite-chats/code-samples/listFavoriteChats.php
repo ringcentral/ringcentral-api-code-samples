@@ -5,7 +5,7 @@
 // OPTIONAL QUERY PARAMETERS
 $queryParams = array(
     //'recordCount' => 30
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

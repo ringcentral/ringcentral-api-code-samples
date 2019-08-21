@@ -13,7 +13,7 @@ $queryParams = array(
     //'type' => array( 'Voice', 'Fax' ),
     //'page' => 1,
     //'perPage' => 100
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

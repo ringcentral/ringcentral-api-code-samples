@@ -6,7 +6,7 @@ const queryParams = {
     //filter: '<ENTER VALUE>',
     //startIndex: 1,
     //count: 100
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});
