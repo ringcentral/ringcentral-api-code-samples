@@ -16,7 +16,7 @@ $queryParams = array(
     //'assigneeStatus' => 'Pending',
     //'pageToken' => '<ENTER VALUE>',
     //'recordCount' => 30
-)
+);
 
 require('vendor/autoload.php');
 $rcsdk = new RingCentral\SDK\SDK(getenv('clientId'), getenv('clientSecret'), getenv('serverURL'));

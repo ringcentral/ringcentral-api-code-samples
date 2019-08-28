@@ -15,7 +15,7 @@ const queryParams = {
     //assigneeStatus: 'Pending',
     //pageToken: '<ENTER VALUE>',
     //recordCount: 30
-}
+};
 
 const SDK = require('ringcentral');
 const rcsdk = new SDK({server: process.env.serverURL, appKey: process.env.clientId, appSecret: process.env.clientSecret});
