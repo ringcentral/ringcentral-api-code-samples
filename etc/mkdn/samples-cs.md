@@ -24,6 +24,8 @@ var r = await rc.Restapi().List();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetVersionsResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetVersionsResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/API-Info/readAPIVersions) in API Explorer.
 
 ## Get Version Info
@@ -51,6 +53,8 @@ var r = await rc.Restapi(apiVersion).Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetVersionResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetVersionResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/API-Info/readAPIVersion) in API Explorer.
 
 ## Get Service Status
@@ -74,6 +78,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Status().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/API-Info/readAPIStatus) in API Explorer.
 
@@ -122,6 +128,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallLog().L
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserCallLogResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserCallLogResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/readUserCallLog) in API Explorer.
 
 ## Delete User Call Log
@@ -159,6 +167,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallLog().Delete(deleteUserCallLogParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/deleteUserCallLog) in API Explorer.
 
@@ -199,6 +209,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallLogSync
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallLogSync](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallLogSync.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/syncUserCallLog) in API Explorer.
 
 ## Get User Call Record
@@ -232,6 +244,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallLog(callRecordId).Get(readUserCallRecordParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [UserCallLogRecord](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserCallLogRecord.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/readUserCallRecord) in API Explorer.
 
@@ -269,6 +283,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ActiveCalls().Get(listExtensionActiveCallsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ActiveCallsResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ActiveCallsResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/listExtensionActiveCalls) in API Explorer.
 
@@ -313,6 +329,8 @@ var r = await rc.Restapi().Account(accountId).CallLog().List(readCompanyCallLogP
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AccountCallLogResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AccountCallLogResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/readCompanyCallLog) in API Explorer.
 
 ## Sync Company Call Log
@@ -351,6 +369,8 @@ var r = await rc.Restapi().Account(accountId).CallLogSync().Get(syncAccountCallL
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AccountCallLogSyncResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AccountCallLogSyncResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/syncAccountCallLog) in API Explorer.
 
 ## Get Company Call Log Record(s)
@@ -378,6 +398,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallLog(callRecordId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CompanyCallLogRecord](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyCallLogRecord.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/readCompanyCallRecord) in API Explorer.
 
@@ -416,6 +438,8 @@ var r = await rc.Restapi().Account(accountId).ActiveCalls().Get(listCompanyActiv
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ActiveCallsResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ActiveCallsResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Log/listCompanyActiveCalls) in API Explorer.
 
 ## Get Call Recording
@@ -444,6 +468,8 @@ var r = await rc.Restapi().Account(accountId).Recording(recordingId).Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetCallRecordingResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetCallRecordingResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Recordings/readCallRecording) in API Explorer.
 
 ## Get Call Recordings Data
@@ -471,6 +497,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Recording(recordingId).Content().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type `byte[]`
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Recordings/listCallRecordingData) in API Explorer.
 
@@ -512,6 +540,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Sms().Post(createSMSMessage);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetMessageInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/SMS/createSMSMessage) in API Explorer.
 
@@ -555,6 +585,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CompanyPage
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetMessageInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Pager-Messages/createInternalTextMessage) in API Explorer.
 
 ## Create Fax Message
@@ -582,6 +614,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Fax().Post(formData);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [FaxResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/FaxResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Fax/createFaxMessage) in API Explorer.
 
@@ -612,6 +646,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().FaxCoverPage().Get(listFaxCoverPagesParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ListFaxCoverPagesResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ListFaxCoverPagesResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Fax/listFaxCoverPages) in API Explorer.
 
@@ -656,6 +692,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageStor
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetMessageList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetMessageList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/listMessages) in API Explorer.
 
 ## Delete Conversation
@@ -691,6 +729,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageStor
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/deleteMessageByFilter) in API Explorer.
 
 ## Get Message
@@ -719,6 +759,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageStore(messageId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetMessageInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/readMessage) in API Explorer.
 
@@ -753,6 +795,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageStore(messageId).Put(updateMessageRequest);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetMessageInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetMessageInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/updateMessage) in API Explorer.
 
@@ -789,6 +833,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageStor
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/deleteMessage) in API Explorer.
 
 ## Get Message Content
@@ -823,6 +869,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type `byte[]`
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/readMessageContent) in API Explorer.
 
@@ -865,6 +913,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).MessageSync
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetMessageSyncResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetMessageSyncResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/syncMessages) in API Explorer.
 
 ## Get Message Store Configuration
@@ -891,6 +941,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).MessageStoreConfiguration().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [MessageStoreConfiguration](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MessageStoreConfiguration.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/readMessageStoreConfiguration) in API Explorer.
 
@@ -923,6 +975,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).MessageStoreConfiguration().Put(messageStoreConfiguration);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [MessageStoreConfiguration](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MessageStoreConfiguration.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Store/updateMessageStoreConfiguration) in API Explorer.
 
@@ -970,6 +1024,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).RingOut().P
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetRingOutStatusResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetRingOutStatusResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/RingOut/createRingOutCall) in API Explorer.
 
 ## Get RingOut Call Status
@@ -999,6 +1055,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).RingOut(rin
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetRingOutStatusResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetRingOutStatusResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/RingOut/readRingOutCallStatus) in API Explorer.
 
 ## Cancel RingOut Call
@@ -1027,6 +1085,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).RingOut(ringoutId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/RingOut/deleteRingOutCall) in API Explorer.
 
@@ -1064,6 +1124,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AddressBook().Contact().List(listContactsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ContactList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ContactList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/listContacts) in API Explorer.
 
@@ -1144,6 +1206,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).AddressBook
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PersonalContactResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PersonalContactResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/createContact) in API Explorer.
 
 ## Get Contact
@@ -1172,6 +1236,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [PersonalContactResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PersonalContactResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/readContact) in API Explorer.
 
@@ -1253,6 +1319,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).AddressBook
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PersonalContactResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PersonalContactResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/updateContact) in API Explorer.
 
 ## Delete Contact
@@ -1281,6 +1349,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AddressBook().Contact(contactId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/deleteContact) in API Explorer.
 
@@ -1318,6 +1388,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).AddressBook
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AddressBookSync](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AddressBookSync.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/syncAddressBook) in API Explorer.
 
 ## Get Favorite Contact List
@@ -1345,6 +1417,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Favorite().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [FavoriteContactList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/FavoriteContactList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/listFavoriteContacts) in API Explorer.
 
@@ -1384,6 +1458,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Favorite().Put(favoriteCollection);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [FavoriteContactList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/FavoriteContactList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/External-Contacts/updateFavoriteContactList) in API Explorer.
 
@@ -1428,6 +1504,8 @@ var r = await rc.Restapi().Account(accountId).Directory().Entries().Search().Pos
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [DirectoryResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DirectoryResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Internal-Contacts/searchDirectoryEntries) in API Explorer.
 
 ## Get Corporate Directory Entry
@@ -1455,6 +1533,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Directory().Entries(entryId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ContactResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ContactResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Internal-Contacts/readDirectoryEntry) in API Explorer.
 
@@ -1492,6 +1572,8 @@ var r = await rc.Restapi().Account(accountId).Directory().Entries().List(listDir
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [DirectoryResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DirectoryResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Internal-Contacts/listDirectoryEntries) in API Explorer.
 
 ## Get Account Federation
@@ -1518,6 +1600,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Directory().Federation().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [FederationResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/FederationResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Internal-Contacts/readAccountFederation) in API Explorer.
 
@@ -1552,6 +1636,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Presence().Get(readUserPresenceStatusParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetPresenceInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetPresenceInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Presence/readUserPresenceStatus) in API Explorer.
 
@@ -1613,6 +1699,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Presence().
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PresenceInfoResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PresenceInfoResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Presence/updateUserPresenceStatus) in API Explorer.
 
 ## Get User Presence Status List
@@ -1648,6 +1736,8 @@ var r = await rc.Restapi().Account(accountId).Presence().Get(readAccountPresence
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AccountPresenceInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AccountPresenceInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Presence/readAccountPresence) in API Explorer.
 
 ## Get Chats
@@ -1679,6 +1769,8 @@ var r = await rc.Restapi().Glip().Chats().List(listGlipChatsParameters);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipChatsList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipChatsList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/listGlipChats) in API Explorer.
 
 ## Get Chat
@@ -1705,6 +1797,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipChatInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipChatInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/readGlipChat) in API Explorer.
 
@@ -1735,6 +1829,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Conversations().List(listGlipConversationsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipConversationsList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipConversationsList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Conversations/listGlipConversations) in API Explorer.
 
@@ -1770,6 +1866,8 @@ var r = await rc.Restapi().Glip().Conversations().Post(createGlipConversationReq
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipConversationInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipConversationInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Conversations/createGlipConversation) in API Explorer.
 
 ## Get Conversation
@@ -1796,6 +1894,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Conversations(chatId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipConversationInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipConversationInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Conversations/readGlipConversation) in API Explorer.
 
@@ -1826,6 +1926,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Teams().List(listGlipTeamsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipTeamsList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTeamsList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/listGlipTeams) in API Explorer.
 
@@ -1864,6 +1966,8 @@ var r = await rc.Restapi().Glip().Teams().Post(glipPostTeamBody);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipTeamInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTeamInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/createGlipTeam) in API Explorer.
 
 ## Get Team
@@ -1890,6 +1994,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Teams(chatId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipTeamInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTeamInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/readGlipTeam) in API Explorer.
 
@@ -1925,6 +2031,8 @@ var r = await rc.Restapi().Glip().Teams(chatId).Patch(glipPatchTeamBody);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipTeamInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTeamInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/patchGlipTeam) in API Explorer.
 
 ## Delete Team
@@ -1951,6 +2059,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Teams(chatId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/deleteGlipTeam) in API Explorer.
 
@@ -1979,6 +2089,8 @@ var r = await rc.Restapi().Glip().Teams(chatId).Join().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/joinGlipTeam) in API Explorer.
 
 ## Leave Team
@@ -2005,6 +2117,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Teams(chatId).Leave().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/leaveGlipTeam) in API Explorer.
 
@@ -2043,6 +2157,8 @@ var r = await rc.Restapi().Glip().Teams(chatId).Add().Post(glipPostMembersListBo
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/addGlipTeamMembers) in API Explorer.
 
 ## Remove Team Members
@@ -2079,6 +2195,8 @@ var r = await rc.Restapi().Glip().Teams(chatId).Remove().Post(glipPostMembersIds
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/removeGlipTeamMembers) in API Explorer.
 
 ## Archive Team
@@ -2105,6 +2223,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Teams(chatId).Archive().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/archiveGlipTeam) in API Explorer.
 
@@ -2133,6 +2253,8 @@ var r = await rc.Restapi().Glip().Teams(chatId).Unarchive().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/unarchiveGlipTeam) in API Explorer.
 
 ## Get Everyone Chat
@@ -2156,6 +2278,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Everyone().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipEveryoneInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/readGlipEveryone) in API Explorer.
 
@@ -2187,6 +2311,8 @@ var r = await rc.Restapi().Glip().Everyone().Patch(updateGlipEveryoneRequest);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipEveryoneInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEveryoneInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Teams/patchGlipEveryone) in API Explorer.
 
 ## Get Recent Chats
@@ -2217,6 +2343,8 @@ var r = await rc.Restapi().Glip().Recent().Chats().Get(listRecentChatsParameters
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipChatsListWithoutNavigation](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipChatsListWithoutNavigation.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/listRecentChats) in API Explorer.
 
 ## Get Favorite Chats
@@ -2246,6 +2374,8 @@ var r = await rc.Restapi().Glip().Favorites().Get(listFavoriteChatsParameters);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipChatsListWithoutNavigation](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipChatsListWithoutNavigation.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/listFavoriteChats) in API Explorer.
 
 ## Add Chat to Favorites
@@ -2272,6 +2402,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Favorite().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/favoriteGlipChat) in API Explorer.
 
@@ -2300,6 +2432,8 @@ var r = await rc.Restapi().Glip().Chats(chatId).Unfavorite().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/unfavoriteGlipChat) in API Explorer.
 
 ## Mark Chat as Read
@@ -2326,6 +2460,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Read().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/markChatRead) in API Explorer.
 
@@ -2354,6 +2490,8 @@ var r = await rc.Restapi().Glip().Chats(chatId).Unread().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Chats/markChatUnread) in API Explorer.
 
 ## Get Post
@@ -2381,6 +2519,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Posts(postId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipPostInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipPostInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Posts/readGlipPost) in API Explorer.
 
@@ -2415,6 +2555,8 @@ var r = await rc.Restapi().Glip().Chats(chatId).Posts(postId).Patch(glipPatchPos
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipPostInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipPostInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Posts/patchGlipPost) in API Explorer.
 
 ## Delete Post
@@ -2442,6 +2584,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Posts(postId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Posts/deleteGlipPost) in API Explorer.
 
@@ -2475,6 +2619,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Posts().List(readGlipPostsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipPostsList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipPostsList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Posts/readGlipPosts) in API Explorer.
 
@@ -2514,6 +2660,8 @@ var r = await rc.Restapi().Glip().Chats(chatId).Posts().Post(glipPostPostBody);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipPostInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipPostInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Posts/createGlipPost) in API Explorer.
 
 ## Get User Events List
@@ -2543,6 +2691,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Events().List(readGlipEventsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipEventsInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEventsInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/readGlipEvents) in API Explorer.
 
@@ -2585,6 +2735,8 @@ var r = await rc.Restapi().Glip().Events().Post(glipEventCreate);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipEventInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEventInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/createEvent) in API Explorer.
 
 ## Get Event
@@ -2611,6 +2763,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Events(eventId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipEventInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEventInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/readEvent) in API Explorer.
 
@@ -2656,6 +2810,8 @@ var r = await rc.Restapi().Glip().Events(eventId).Put(glipEventCreate);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipEventInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEventInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/updateEvent) in API Explorer.
 
 ## Delete Event
@@ -2682,6 +2838,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Events(eventId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/deleteEvent) in API Explorer.
 
@@ -2727,6 +2885,8 @@ var r = await rc.Restapi().Glip().Groups(groupId).Events().Post(glipEventCreate)
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipEventInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEventInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/createEventbyGroupId) in API Explorer.
 
 ## Get Group Events
@@ -2753,6 +2913,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Groups(groupId).Events().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipEventInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipEventInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Calendar-Events/listGroupEvents) in API Explorer.
 
@@ -2793,6 +2955,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Chats(chatId).Tasks().Get(listChatTasksParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipTaskList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTaskList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Tasks/listChatTasks) in API Explorer.
 
@@ -2848,6 +3012,8 @@ var r = await rc.Restapi().Glip().Chats(chatId).Tasks().Post(glipCreateTask);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipTaskInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTaskInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Tasks/createTask) in API Explorer.
 
 ## Get Task
@@ -2874,6 +3040,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Tasks(taskId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipTaskInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTaskInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Tasks/readTask) in API Explorer.
 
@@ -2929,6 +3097,8 @@ var r = await rc.Restapi().Glip().Tasks(taskId).Patch(glipUpdateTask);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipTaskList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipTaskList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Tasks/patchTask) in API Explorer.
 
 ## Delete Task
@@ -2955,6 +3125,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Tasks(taskId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Tasks/deleteTask) in API Explorer.
 
@@ -2994,6 +3166,8 @@ var r = await rc.Restapi().Glip().Tasks(taskId).Complete().Post(glipCompleteTask
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Tasks/completeTask) in API Explorer.
 
 ## Get Person
@@ -3020,6 +3194,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Persons(personId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipPersonInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipPersonInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Profile/readGlipPerson) in API Explorer.
 
@@ -3048,6 +3224,8 @@ var r = await rc.Restapi().Glip().Companies(companyId).Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipCompany](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipCompany.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Profile/readGlipCompany) in API Explorer.
 
 ## Create Webhook in Group
@@ -3074,6 +3252,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Groups(groupId).Webhooks().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipWebhookInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipWebhookInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/createGlipGroupWebhook) in API Explorer.
 
@@ -3102,6 +3282,8 @@ var r = await rc.Restapi().Glip().Groups(groupId).Webhooks().Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipWebhookList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipWebhookList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/listGlipGroupWebhooks) in API Explorer.
 
 ## Get Webhooks
@@ -3125,6 +3307,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Webhooks().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipWebhookList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipWebhookList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/listGlipWebhooks) in API Explorer.
 
@@ -3153,6 +3337,8 @@ var r = await rc.Restapi().Glip().Webhooks(webhookId).Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GlipWebhookList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipWebhookList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/readGlipWebhook) in API Explorer.
 
 ## Delete Webhook
@@ -3179,6 +3365,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Webhooks(webhookId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/deleteGlipWebhook) in API Explorer.
 
@@ -3207,6 +3395,8 @@ var r = await rc.Restapi().Glip().Webhooks(webhookId).Activate().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/activateGlipWebhook) in API Explorer.
 
 ## Suspend Webhook
@@ -3234,6 +3424,8 @@ var r = await rc.Restapi().Glip().Webhooks(webhookId).Suspend().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Webhooks/suspendGlipWebhook) in API Explorer.
 
 ## Get Preferences
@@ -3257,6 +3449,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().Preferences().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GlipPreferencesInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GlipPreferencesInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Profile/readGlipPreferences) in API Explorer.
 
@@ -3285,6 +3479,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [MeetingsResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MeetingsResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Management/listMeetings) in API Explorer.
 
@@ -3341,6 +3537,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting().P
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [MeetingResponseResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MeetingResponseResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Management/createMeeting) in API Explorer.
 
 ## Get Meeting Info
@@ -3369,6 +3567,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting(meetingId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [MeetingResponseResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MeetingResponseResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Management/readMeeting) in API Explorer.
 
@@ -3426,6 +3626,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting(mee
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [MeetingResponseResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MeetingResponseResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Management/updateMeeting) in API Explorer.
 
 ## Delete Meeting
@@ -3454,6 +3656,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting(meetingId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Management/deleteMeeting) in API Explorer.
 
@@ -3484,6 +3688,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting(mee
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Management/endMeeting) in API Explorer.
 
 ## Get Meeting Service Info
@@ -3511,6 +3717,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Meeting().ServiceInfo().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [MeetingServiceInfoResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MeetingServiceInfoResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Configuration/readMeetingServiceInfo) in API Explorer.
 
@@ -3540,6 +3748,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).MeetingsCon
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AssistantsResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AssistantsResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Configuration/readAssistants) in API Explorer.
 
 ## Get Assisted Users
@@ -3568,6 +3778,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).MeetingsCon
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AssistedUsersResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AssistedUsersResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Meeting-Configuration/readAssistedUsers) in API Explorer.
 
 ## Get Subscriptions
@@ -3591,6 +3803,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Subscription().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [RecordsCollectionResourceSubscriptionResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/RecordsCollectionResourceSubscriptionResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Subscriptions/listSubscriptions) in API Explorer.
 
@@ -3632,6 +3846,8 @@ var r = await rc.Restapi().Subscription().Post(createSubscriptionRequest);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [SubscriptionInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SubscriptionInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Subscriptions/createSubscription) in API Explorer.
 
 ## Get Subscription
@@ -3658,6 +3874,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Subscription(subscriptionId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [SubscriptionInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SubscriptionInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Subscriptions/readSubscription) in API Explorer.
 
@@ -3707,6 +3925,8 @@ var r = await rc.Restapi().Subscription(subscriptionId).Put(modifySubscriptionRe
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [SubscriptionInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SubscriptionInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Subscriptions/updateSubscription) in API Explorer.
 
 ## Cancel Subscription
@@ -3733,6 +3953,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Subscription(subscriptionId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Subscriptions/deleteSubscription) in API Explorer.
 
@@ -3761,6 +3983,8 @@ var r = await rc.Restapi().Subscription(subscriptionId).Renew().Post();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [SubscriptionInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SubscriptionInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Subscriptions/renewSubscription) in API Explorer.
 
 ## Get Authorization Profile
@@ -3788,6 +4012,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AuthzProfile().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [AuthProfileResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AuthProfileResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Permissions/readAuthorizationProfile) in API Explorer.
 
@@ -3823,6 +4049,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).AuthzProfil
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AuthProfileCheckResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AuthProfileCheckResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Permissions/checkUserPermission) in API Explorer.
 
 ## Get User Business Hours
@@ -3850,6 +4078,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).BusinessHours().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetUserBusinessHoursResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetUserBusinessHoursResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Business-Hours/readUserBusinessHours) in API Explorer.
 
@@ -3929,6 +4159,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).BusinessHou
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserBusinessHoursUpdateResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserBusinessHoursUpdateResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Business-Hours/updateUserBusinessHours) in API Explorer.
 
 ## Get Company Business Hours
@@ -3955,6 +4187,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).BusinessHours().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CompanyBusinessHours](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyBusinessHours.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Business-Hours/readCompanyBusinessHours) in API Explorer.
 
@@ -4033,6 +4267,8 @@ var r = await rc.Restapi().Account(accountId).BusinessHours().Put(companyBusines
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CompanyBusinessHours](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyBusinessHours.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Business-Hours/updateCompanyBusinessHours) in API Explorer.
 
 ## Get Caller Blocking Settings
@@ -4060,6 +4296,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlocking().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallerBlockingSettings](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallerBlockingSettings.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/readCallerBlockingSettings) in API Explorer.
 
@@ -4106,6 +4344,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlock
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallerBlockingSettings](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallerBlockingSettings.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/updateCallerBlockingSettings) in API Explorer.
 
 ## Get Blocked/Allowed Phone Numbers
@@ -4140,6 +4380,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers().List(listBlockedAllowedNumbersParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [BlockedAllowedPhoneNumbersList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/BlockedAllowedPhoneNumbersList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/listBlockedAllowedNumbers) in API Explorer.
 
@@ -4176,6 +4418,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlock
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [BlockedAllowedPhoneNumberInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/BlockedAllowedPhoneNumberInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/createBlockedAllowedNumber) in API Explorer.
 
 ## Get Blocked/Allowed Number
@@ -4205,6 +4449,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlock
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [BlockedAllowedPhoneNumberInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/BlockedAllowedPhoneNumberInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/readBlockedAllowedNumber) in API Explorer.
 
 ## Delete Blocked/Allowed Number
@@ -4233,6 +4479,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlocking().PhoneNumbers(blockedNumberId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/deleteBlockedAllowedNumber) in API Explorer.
 
@@ -4270,6 +4518,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerBlock
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [BlockedAllowedPhoneNumberInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/BlockedAllowedPhoneNumberInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Blocking/updateBlockedAllowedNumber) in API Explorer.
 
 ## Get Forwarding Number List
@@ -4303,6 +4553,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ForwardingNumber().List(listForwardingNumbersParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetExtensionForwardingNumberListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionForwardingNumberListResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Forwarding/listForwardingNumbers) in API Explorer.
 
@@ -4342,6 +4594,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).ForwardingN
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ForwardingNumberInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ForwardingNumberInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Forwarding/createForwardingNumber) in API Explorer.
 
 ## Get Forwarding Number
@@ -4370,6 +4624,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ForwardingNumberResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ForwardingNumberResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Forwarding/readForwardingNumber) in API Explorer.
 
@@ -4408,6 +4664,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).ForwardingN
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ForwardingNumberInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ForwardingNumberInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Forwarding/updateForwardingNumber) in API Explorer.
 
 ## Delete Forwarding Number
@@ -4436,6 +4694,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ForwardingNumber(forwardingNumberId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Forwarding/deleteForwardingNumber) in API Explorer.
 
@@ -4472,6 +4732,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AnsweringRule().List(listAnsweringRulesParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [UserAnsweringRuleList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserAnsweringRuleList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/listAnsweringRules) in API Explorer.
 
@@ -4647,6 +4909,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).AnsweringRu
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AnsweringRuleInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AnsweringRuleInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/createAnsweringRule) in API Explorer.
 
 ## Get Call Handling Rule
@@ -4680,6 +4944,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Get(readAnsweringRuleParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [AnsweringRuleInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AnsweringRuleInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/readAnsweringRule) in API Explorer.
 
@@ -4845,6 +5111,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).AnsweringRu
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AnsweringRuleInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AnsweringRuleInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/updateAnsweringRule) in API Explorer.
 
 ## Delete Call Handling Rule
@@ -4873,6 +5141,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).AnsweringRule(ruleId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/deleteAnsweringRule) in API Explorer.
 
@@ -4988,6 +5258,8 @@ var r = await rc.Restapi().Account(accountId).AnsweringRule().Post(companyAnswer
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CompanyAnsweringRuleInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyAnsweringRuleInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/createCompanyAnsweringRule) in API Explorer.
 
 ## Get Company Call Handling Rule List
@@ -5014,6 +5286,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).AnsweringRule().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CompanyAnsweringRuleList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyAnsweringRuleList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/listCompanyAnsweringRules) in API Explorer.
 
@@ -5042,6 +5316,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).AnsweringRule(ruleId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CompanyAnsweringRuleInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyAnsweringRuleInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/readCompanyAnsweringRule) in API Explorer.
 
@@ -5157,6 +5433,8 @@ var r = await rc.Restapi().Account(accountId).AnsweringRule(ruleId).Put(companyA
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CompanyAnsweringRuleInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyAnsweringRuleInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/updateCompanyAnsweringRule) in API Explorer.
 
 ## Delete Company Call Handling Rule
@@ -5184,6 +5462,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).AnsweringRule(ruleId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/deleteCompanyAnsweringRule) in API Explorer.
 
@@ -5217,6 +5497,8 @@ var r = await rc.Restapi().Dictionary().Greeting().List(listStandardGreetingsPar
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [DictionaryGreetingList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DictionaryGreetingList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/listStandardGreetings) in API Explorer.
 
 ## Get Standard Greeting
@@ -5243,6 +5525,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().Greeting(greetingId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [DictionaryGreetingInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DictionaryGreetingInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/readStandardGreeting) in API Explorer.
 
@@ -5271,6 +5555,8 @@ var r = await rc.Restapi().Account(accountId).Greeting().Post(formData);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CustomCompanyGreetingInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CustomCompanyGreetingInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/createCompanyGreeting) in API Explorer.
 
 ## Create Custom User Greeting
@@ -5298,6 +5584,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Greeting().Post(formData);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CustomUserGreetingInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CustomUserGreetingInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/createCustomUserGreeting) in API Explorer.
 
@@ -5328,6 +5616,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Greeting(gr
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CustomUserGreetingInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CustomUserGreetingInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/readCustomGreeting) in API Explorer.
 
 ## Create IVR Prompts
@@ -5355,6 +5645,8 @@ var r = await rc.Restapi().Account(accountId).IvrPrompts().Post(formData);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PromptInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PromptInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/createIVRPrompt) in API Explorer.
 
 ## Get IVR Prompt List
@@ -5381,6 +5673,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).IvrPrompts().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [IVRPrompts](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/IVRPrompts.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/listIVRPrompts) in API Explorer.
 
@@ -5410,6 +5704,8 @@ var r = await rc.Restapi().Account(accountId).IvrPrompts(promptId).Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PromptInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PromptInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/readIVRPrompt) in API Explorer.
 
 ## Delete IVR Prompt
@@ -5437,6 +5733,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).IvrPrompts(promptId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/deleteIVRPrompt) in API Explorer.
 
@@ -5471,6 +5769,8 @@ var r = await rc.Restapi().Account(accountId).IvrPrompts(promptId).Put(updateIVR
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PromptInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PromptInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/updateIVRPrompt) in API Explorer.
 
 ## Get IVR Prompt Content
@@ -5498,6 +5798,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).IvrPrompts(promptId).Content().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type `byte[]`
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/readIVRPromptContent) in API Explorer.
 
@@ -5559,6 +5861,8 @@ var r = await rc.Restapi().Account(accountId).IvrMenus().Post(iVRMenuInfo);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [IVRMenuInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/IVRMenuInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/createIVRMenu) in API Explorer.
 
 ## Get IVR Menu
@@ -5586,6 +5890,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).IvrMenus(ivrMenuId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [IVRMenuInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/IVRMenuInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/readIVRMenu) in API Explorer.
 
@@ -5648,6 +5954,8 @@ var r = await rc.Restapi().Account(accountId).IvrMenus(ivrMenuId).Put(iVRMenuInf
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [IVRMenuInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/IVRMenuInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Routing/updateIVRMenu) in API Explorer.
 
 ## Get Call Recording Settings
@@ -5674,6 +5982,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallRecording().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallRecordingSettingsResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallRecordingSettingsResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/readCallRecordingSettings) in API Explorer.
 
@@ -5722,6 +6032,8 @@ var r = await rc.Restapi().Account(accountId).CallRecording().Put(callRecordingS
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallRecordingSettingsResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallRecordingSettingsResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/updateCallRecordingSettings) in API Explorer.
 
 ## Get Call Recording Extension List
@@ -5748,6 +6060,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallRecording().Extensions().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallRecordingExtensions](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallRecordingExtensions.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/listCallRecordingExtensions) in API Explorer.
 
@@ -5801,6 +6115,8 @@ var r = await rc.Restapi().Account(accountId).CallRecording().BulkAssign().Post(
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/updateCallRecordingExtensionList) in API Explorer.
 
 ## Get Call Recording Custom Greeting List
@@ -5833,6 +6149,8 @@ var r = await rc.Restapi().Account(accountId).CallRecording().CustomGreetings().
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallRecordingCustomGreetings](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallRecordingCustomGreetings.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/listCallRecordingCustomGreetings) in API Explorer.
 
 ## Delete Call Recording Custom Greeting List
@@ -5859,6 +6177,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallRecording().CustomGreetings().Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/deleteCallRecordingCustomGreetingList) in API Explorer.
 
@@ -5887,6 +6207,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallRecording().CustomGreetings(greetingId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Rule-Management/deleteCallRecordingCustomGreeting) in API Explorer.
 
@@ -5928,6 +6250,8 @@ var r = await rc.Restapi().ClientInfo().SipProvision().Post(createSipRegistratio
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CreateSipRegistrationResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CreateSipRegistrationResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/SIP/createSIPRegistration) in API Explorer.
 
 ## Get Extension Phone Number List
@@ -5963,6 +6287,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).PhoneNumber
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetExtensionPhoneNumbersResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionPhoneNumbersResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Phone-Numbers/listExtensionPhoneNumbers) in API Explorer.
 
 ## Get Extension
@@ -5990,6 +6316,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetExtensionInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/readExtension) in API Explorer.
 
@@ -6087,6 +6415,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Put(extensi
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetExtensionInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionInfoResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/updateExtension) in API Explorer.
 
 ## Delete Extension
@@ -6115,6 +6445,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Delete();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/deleteExtension) in API Explorer.
 
 ## Get Extension Caller ID
@@ -6142,6 +6474,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerId().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ExtensionCallerIdInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ExtensionCallerIdInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/readExtensionCallerId) in API Explorer.
 
@@ -6208,6 +6542,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).CallerId().
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ExtensionCallerIdInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ExtensionCallerIdInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/updateExtensionCallerId) in API Explorer.
 
 ## Get Extension Grant List
@@ -6241,6 +6577,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetExtensionGrantListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionGrantListResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/listExtensionGrants) in API Explorer.
 
@@ -6281,6 +6619,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Users
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AutomaticLocationUpdatesUserList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AutomaticLocationUpdatesUserList.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/listAutomaticLocationUpdatesUsers) in API Explorer.
 
 ## Enable Automatic Location Updates for Users
@@ -6318,6 +6658,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Users
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/assignMultipleAutomaticaLocationUpdatesUsers) in API Explorer.
 
 ## Get Wireless Point List
@@ -6353,6 +6695,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints().List(listWirelessPointsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [WirelessPointsList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/WirelessPointsList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/listWirelessPoints) in API Explorer.
 
@@ -6405,6 +6749,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Wirel
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [WirelessPointInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/WirelessPointInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/createWirelessPoint) in API Explorer.
 
 ## Get Wireless Point
@@ -6432,6 +6778,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().WirelessPoints(pointId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [WirelessPointInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/WirelessPointInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/readWirelessPoint) in API Explorer.
 
@@ -6486,6 +6834,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Wirel
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [WirelessPointInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/WirelessPointInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/updateWirelessPoint) in API Explorer.
 
 ## Delete Wireless Point
@@ -6514,6 +6864,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Wirel
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/deleteWirelessPoint) in API Explorer.
 
 ## Get Network Map
@@ -6540,6 +6892,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Networks().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [NetworksList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/NetworksList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/listNetworks) in API Explorer.
 
@@ -6606,6 +6960,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Netwo
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [NetworkInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/NetworkInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/createNetwork) in API Explorer.
 
 ## Get Network
@@ -6633,6 +6989,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [NetworkInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/NetworkInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/readNetwork) in API Explorer.
 
@@ -6700,6 +7058,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Netwo
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/updateNetwork) in API Explorer.
 
 ## Delete Network
@@ -6727,6 +7087,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Networks(networkId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/deleteNetwork) in API Explorer.
 
@@ -6767,6 +7129,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Devic
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ListDevicesAutomaticLocationUpdates](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ListDevicesAutomaticLocationUpdates.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/listDevicesAutomaticLocationUpdates) in API Explorer.
 
 ## Enable Automatic Location Updates for Devices
@@ -6804,6 +7168,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Devic
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/assignMultipleDevicesAutomaticLocationUpdates) in API Explorer.
 
 ## Get Account Switch List
@@ -6839,6 +7205,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switches().List(listAccountSwitchesParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [SwitchesList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SwitchesList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/listAccountSwitches) in API Explorer.
 
@@ -6891,6 +7259,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switc
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [SwitchInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SwitchInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/createSwitch) in API Explorer.
 
 ## Get Switch
@@ -6918,6 +7288,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [SwitchInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SwitchInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/readSwitch) in API Explorer.
 
@@ -6972,6 +7344,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switc
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [SwitchInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SwitchInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/updateSwitch) in API Explorer.
 
 ## Delete Switch
@@ -6999,6 +7373,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switches(switchId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/deleteSwitch) in API Explorer.
 
@@ -7054,6 +7430,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().SwitchesBulkCreate().Post(createMultipleSwitchesRequest);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CreateMultipleSwitchesResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CreateMultipleSwitchesResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/createMultipleSwitches) in API Explorer.
 
@@ -7111,6 +7489,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switc
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UpdateMultipleSwitchesResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UpdateMultipleSwitchesResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/updateMultipleSwitches) in API Explorer.
 
 ## Create Multiple Wireless Points
@@ -7165,6 +7545,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkCreate().Post(createMultipleWirelessPointsRequest);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CreateMultipleWirelessPointsResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CreateMultipleWirelessPointsResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/createMultipleWirelessPoints) in API Explorer.
 
@@ -7222,6 +7604,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Wirel
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UpdateMultipleWirelessPointsResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UpdateMultipleWirelessPointsResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/updateMultipleWirelessPoints) in API Explorer.
 
 ## Validate Multiple Wireless Points
@@ -7277,6 +7661,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().WirelessPointsBulkValidate().Post(validateMultipleWirelessPointsRequest);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ValidateMultipleWirelessPointsResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ValidateMultipleWirelessPointsResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/validateMultipleWirelessPoints) in API Explorer.
 
@@ -7334,6 +7720,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Switc
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ValidateMultipleSwitchesResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ValidateMultipleSwitchesResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/validateMultipleSwitches) in API Explorer.
 
 ## Get Emergency Map Configuration Task
@@ -7362,6 +7750,8 @@ var r = await rc.Restapi().Account(accountId).EmergencyAddressAutoUpdate().Tasks
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AutomaticLocationUpdatesTaskInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AutomaticLocationUpdatesTaskInfo.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Automatic-Location-Updates/readAutomaticLocationUpdatesTask) in API Explorer.
 
 ## Get Notification Settings
@@ -7389,6 +7779,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).NotificationSettings().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [NotificationSettings](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/NotificationSettings.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/readNotificationSettings) in API Explorer.
 
@@ -7483,6 +7875,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Notificatio
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [NotificationSettings](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/NotificationSettings.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/updateNotificationSettings) in API Explorer.
 
 ## Get User Profile Image
@@ -7510,6 +7904,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ProfileImage().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type `byte[]`
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/readUserProfileImage) in API Explorer.
 
@@ -7539,6 +7935,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).ProfileImag
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/createUserProfileImage) in API Explorer.
 
 ## Update User Profile Image
@@ -7566,6 +7964,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ProfileImage().Put(formData);
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/updateUserProfileImage) in API Explorer.
 
@@ -7595,6 +7995,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).ProfileImage(scaleSize).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type `byte[]`
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/readScaledPofileImage) in API Explorer.
 
@@ -7628,6 +8030,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension(extensionId).Conferencing().Get(readConferencingSettingsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetConferencingInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetConferencingInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/readConferencingSettings) in API Explorer.
 
@@ -7668,6 +8072,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Conferencin
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetConferencingInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetConferencingInfoResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/User-Settings/updateConferencingSettings) in API Explorer.
 
 ## Get Account Info
@@ -7695,6 +8101,8 @@ var r = await rc.Restapi().Account(accountId).Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetAccountInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetAccountInfoResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Company/readAccountInfo) in API Explorer.
 
 ## Get Account Business Address
@@ -7721,6 +8129,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).BusinessAddress().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [AccountBusinessAddressResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AccountBusinessAddressResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Company/readAccountBusinessAddress) in API Explorer.
 
@@ -7762,6 +8172,8 @@ var r = await rc.Restapi().Account(accountId).BusinessAddress().Put(modifyAccoun
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AccountBusinessAddressResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AccountBusinessAddressResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Company/updateAccountBusinessAddress) in API Explorer.
 
 ## Get Account Service Info
@@ -7789,6 +8201,8 @@ var r = await rc.Restapi().Account(accountId).ServiceInfo().Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetServiceInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetServiceInfoResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Company/readAccountServiceInfo) in API Explorer.
 
 ## Get Language List
@@ -7812,6 +8226,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().Language().List();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [LanguageList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/LanguageList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/listLanguages) in API Explorer.
 
@@ -7839,6 +8255,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().Language(languageId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [LanguageInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/LanguageInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/readLanguage) in API Explorer.
 
@@ -7874,6 +8292,8 @@ var r = await rc.Restapi().Dictionary().Country().List(listCountriesParameters);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetCountryListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetCountryListResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/listCountries) in API Explorer.
 
 ## Get Country
@@ -7900,6 +8320,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().Country(countryId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetCountryInfoDictionaryResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetCountryInfoDictionaryResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/readCountry) in API Explorer.
 
@@ -7934,6 +8356,8 @@ var r = await rc.Restapi().Dictionary().Location().Get(listLocationsParameters);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetLocationListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetLocationListResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/listLocations) in API Explorer.
 
 ## Get States List
@@ -7967,6 +8391,8 @@ var r = await rc.Restapi().Dictionary().State().List(listStatesParameters);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetStateListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetStateListResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/listStates) in API Explorer.
 
 ## Get State
@@ -7993,6 +8419,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().State(stateId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetStateInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetStateInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/readState) in API Explorer.
 
@@ -8023,6 +8451,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().Timezone().List(listTimezonesParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetTimezoneListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetTimezoneListResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/listTimezones) in API Explorer.
 
@@ -8056,6 +8486,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Dictionary().Timezone(timezoneId).Get(readTimezoneParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetTimezoneInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetTimezoneInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Regional-Settings/readTimezone) in API Explorer.
 
@@ -8091,6 +8523,8 @@ var r = await rc.Restapi().Account(accountId).PhoneNumber().List(listAccountPhon
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [AccountPhoneNumbers](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/AccountPhoneNumbers.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Phone-Numbers/listAccountPhoneNumbers) in API Explorer.
 
 ## Get Phone Number
@@ -8118,6 +8552,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).PhoneNumber(phoneNumberId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CompanyPhoneNumberInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CompanyPhoneNumberInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Phone-Numbers/readAccountPhoneNumber) in API Explorer.
 
@@ -8155,6 +8591,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Extension().List(listExtensionsParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetExtensionListResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionListResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Extensions/listExtensions) in API Explorer.
 
@@ -8266,6 +8704,8 @@ var r = await rc.Restapi().Account(accountId).Extension().Post(extensionCreation
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ExtensionCreationResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ExtensionCreationResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Extensions/createExtension) in API Explorer.
 
 ## Get User Template List
@@ -8300,6 +8740,8 @@ var r = await rc.Restapi().Account(accountId).Templates().List(listUserTemplates
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserTemplates](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserTemplates.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Extensions/listUserTemplates) in API Explorer.
 
 ## Get User Template
@@ -8327,6 +8769,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Templates(templateId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [TemplateInfo](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/TemplateInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Extensions/readUserTemplate) in API Explorer.
 
@@ -8362,6 +8806,8 @@ var r = await rc.Restapi().Account(accountId).CallQueues().Get(listCallQueuesPar
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallQueues](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallQueues.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Queues/listCallQueues) in API Explorer.
 
 ## Get Call Queue Members
@@ -8395,6 +8841,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallQueueMembers](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallQueueMembers.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Queues/listCallQueueMembers) in API Explorer.
 
@@ -8434,6 +8882,8 @@ var r = await rc.Restapi().Account(accountId).CallQueues(groupId).BulkAssign().P
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Queues/assignMultipleCallQueueMembers) in API Explorer.
 
 ## Get Paging Group Users
@@ -8468,6 +8918,8 @@ var r = await rc.Restapi().Account(accountId).PagingOnlyGroups(pagingOnlyGroupId
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [PagingOnlyGroupUsers](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PagingOnlyGroupUsers.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Paging-Only-Groups/listPagingGroupUsers) in API Explorer.
 
 ## Get Paging Group Devices
@@ -8501,6 +8953,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).PagingOnlyGroups(pagingOnlyGroupId).Devices().Get(listPagingGroupDevicesParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [PagingOnlyGroupDevices](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/PagingOnlyGroupDevices.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Paging-Only-Groups/listPagingGroupDevices) in API Explorer.
 
@@ -8546,6 +9000,8 @@ var r = await rc.Restapi().Account(accountId).PagingOnlyGroups(pagingOnlyGroupId
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Paging-Only-Groups/assignMultiplePagingGroupUsersDevices) in API Explorer.
 
 ## Create Call Monitoring Group
@@ -8578,6 +9034,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallMonitoringGroups().Post(createCallMonitoringGroupRequest);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallMonitoringGroup](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallMonitoringGroup.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Monitoring-Groups/createCallMonitoringGroup) in API Explorer.
 
@@ -8613,6 +9071,8 @@ var r = await rc.Restapi().Account(accountId).CallMonitoringGroups().List(listCa
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallMonitoringGroups](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallMonitoringGroups.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Monitoring-Groups/listCallMonitoringGroups) in API Explorer.
 
 ## Updates Call Monitoring Group
@@ -8647,6 +9107,8 @@ var r = await rc.Restapi().Account(accountId).CallMonitoringGroups(groupId).Put(
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallMonitoringGroup](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallMonitoringGroup.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Monitoring-Groups/updateCallMonitoringGroup) in API Explorer.
 
 ## Delete Call Monitoring Group
@@ -8674,6 +9136,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallMonitoringGroups(groupId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Monitoring-Groups/deleteCallMonitoringGroup) in API Explorer.
 
@@ -8708,6 +9172,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).CallMonitoringGroups(groupId).Members().Get(listCallMonitoringGroupMembersParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallMonitoringGroupMemberList](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallMonitoringGroupMemberList.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Monitoring-Groups/listCallMonitoringGroupMembers) in API Explorer.
 
@@ -8749,6 +9215,8 @@ var r = await rc.Restapi().Account(accountId).CallMonitoringGroups(groupId).Bulk
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Monitoring-Groups/updateCallMonitoringGroupList) in API Explorer.
 
 ## Parse Phone Number
@@ -8786,6 +9254,8 @@ var r = await rc.Restapi().NumberParser().Parse().Post(parsePhoneNumberRequest, 
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [ParsePhoneNumberResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ParsePhoneNumberResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Phone-Numbers/parsePhoneNumber) in API Explorer.
 
 ## Get Device
@@ -8818,6 +9288,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Device(deviceId).Get(readDeviceParameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [GetDeviceInfoResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetDeviceInfoResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Devices/readDevice) in API Explorer.
 
@@ -8877,6 +9349,8 @@ var r = await rc.Restapi().Account(accountId).Device(deviceId).Put(accountDevice
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [DeviceResource](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DeviceResource.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Devices/updateDevice) in API Explorer.
 
 ## Get Extension Device List
@@ -8911,6 +9385,8 @@ var r = await rc.Restapi().Account(accountId).Extension(extensionId).Device().Ge
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [GetExtensionDevicesResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/GetExtensionDevicesResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Devices/listExtensionDevices) in API Explorer.
 
 ## Check Health
@@ -8935,6 +9411,8 @@ var r = await rc.Scim().Health().Get();
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/checkHealth2) in API Explorer.
 
 ## Get Service Provider Config
@@ -8958,6 +9436,8 @@ await rc.Authorize(
 var r = await rc.Scim().ServiceProviderConfig().Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [ServiceProviderConfig](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/ServiceProviderConfig.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/readServiceProviderConfig2) in API Explorer.
 
@@ -8989,6 +9469,8 @@ await rc.Authorize(
 var r = await rc.Scim().Users().List(searchViaGet2Parameters);
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [UserSearchResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserSearchResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/searchViaGet2) in API Explorer.
 
@@ -9060,6 +9542,8 @@ var r = await rc.Scim().Users().Post(user);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/createUser2) in API Explorer.
 
 ## Search/List Users
@@ -9094,6 +9578,8 @@ var r = await rc.Scim().Users()..search().Post(searchRequest);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserSearchResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserSearchResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/searchViaPost2) in API Explorer.
 
 ## Get User
@@ -9120,6 +9606,8 @@ await rc.Authorize(
 var r = await rc.Scim().Users(id).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [UserResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/readUser2) in API Explorer.
 
@@ -9194,6 +9682,8 @@ var r = await rc.Scim().Users(id).Put(user);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/replaceUser2) in API Explorer.
 
 ## Delete User
@@ -9220,6 +9710,8 @@ await rc.Authorize(
 var r = await rc.Scim().Users(id).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/deleteUser2) in API Explorer.
 
@@ -9262,6 +9754,8 @@ var r = await rc.Scim().Users(id).Patch(userPatch);
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [UserResponse](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/UserResponse.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/SCIM/patchUser2) in API Explorer.
 
 ## Create CallOut Call Session
@@ -9300,6 +9794,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().CallOut().Post(makeCal
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallSession](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallSession.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/createCallOutCallSession) in API Explorer.
 
 ## Get Call Session Status
@@ -9334,6 +9830,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallSessionObject](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallSessionObject.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/readCallSessionStatus) in API Explorer.
 
 ## Drop Call Session
@@ -9361,6 +9859,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySessionId).Delete();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/deleteCallSession) in API Explorer.
 
@@ -9391,6 +9891,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallParty](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallParty.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/holdCallParty) in API Explorer.
 
 ## Unhold Call Party
@@ -9420,6 +9922,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallParty](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallParty.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/unholdCallParty) in API Explorer.
 
 ## Reject Call Party
@@ -9448,6 +9952,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Reject().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/rejectParty) in API Explorer.
 
@@ -9486,6 +9992,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallParty](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallParty.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/transferCallParty) in API Explorer.
 
 ## Forward Call Party
@@ -9522,6 +10030,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallParty](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallParty.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/forwardCallParty) in API Explorer.
 
 ## Call Flip on Party
@@ -9556,6 +10066,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is an empty string
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/callFlipParty) in API Explorer.
 
 ## Get Call Party Status
@@ -9584,6 +10096,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [CallParty](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallParty.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/readCallPartyStatus) in API Explorer.
 
@@ -9622,6 +10136,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallParty](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallParty.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/updateCallParty) in API Explorer.
 
 ## Create Recording
@@ -9650,6 +10166,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings().Post();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/startCallRecording) in API Explorer.
 
@@ -9691,6 +10209,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [CallRecording](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/CallRecording.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/pauseResumeCallRecording) in API Explorer.
 
 ## Supervise Call
@@ -9726,6 +10246,8 @@ var r = await rc.Restapi().Account(accountId).Telephony().Sessions(telephonySess
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [SuperviseCallSession](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/SuperviseCallSession.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Call-Control/superviseCallSession) in API Explorer.
 
 ## Get Glip Data Archive
@@ -9753,6 +10275,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().DataExport(taskId).Archive(archiveId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type `byte[]`
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Compliance-Exports/readComplianceArchive) in API Explorer.
 
@@ -9790,6 +10314,8 @@ var r = await rc.Restapi().Glip().DataExport().Post(createDataExportTaskRequest)
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [DataExportTask](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DataExportTask.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Compliance-Exports/createDataExportTask) in API Explorer.
 
 ## Get Data Export Task
@@ -9816,6 +10342,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Glip().DataExport(taskId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [DataExportTask](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/DataExportTask.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Glip-Compliance-Exports/readDataExportTask) in API Explorer.
 
@@ -9850,6 +10378,8 @@ var r = await rc.Restapi().Account(accountId).MessageStoreReport().Post(createMe
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [MessageStoreReport](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MessageStoreReport.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Exports/createMessageStoreReport) in API Explorer.
 
 ## Get Message Store Report Task
@@ -9877,6 +10407,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).MessageStoreReport(taskId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is of type [MessageStoreReport](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MessageStoreReport.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Exports/readMessageStoreReportTask) in API Explorer.
 
@@ -9906,6 +10438,8 @@ var r = await rc.Restapi().Account(accountId).MessageStoreReport(taskId).Archive
 // PROCESS RESPONSE
 ```
 
+- `r` is of type [MessageStoreReportArchive](https://github.com/ringcentral/RingCentral.Net/blob/master/RingCentral.Net/Definitions/MessageStoreReportArchive.cs)
+
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Exports/readMessageStoreReportArchive) in API Explorer.
 
 ## Get Message Store Report Archive Content
@@ -9934,6 +10468,8 @@ await rc.Authorize(
 var r = await rc.Restapi().Account(accountId).MessageStoreReport(taskId).Archive(archiveId).Get();
 // PROCESS RESPONSE
 ```
+
+- `r` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference/Message-Exports/readMessageStoreReportArchiveContent) in API Explorer.
 
