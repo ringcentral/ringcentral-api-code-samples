@@ -6,7 +6,7 @@ string accountId = "<ENTER VALUE>";
 
 // OPTIONAL QUERY PARAMETERS
 ListExtensionsParameters listExtensionsParameters = new ListExtensionsParameters {
-    //extensionId = "<ENTER VALUE>",
+    //extensionNumber = "<ENTER VALUE>",
     //email = "<ENTER VALUE>",
     //page = 1,
     //perPage = 100,
